@@ -1,0 +1,48 @@
+body
+{
+	font-family: Arial;
+	
+}
+
+h1
+{
+	font-weight: bold;
+	font-size: 60px;
+	text-align:center;
+	margin-top: 7%;
+}
+
+ul
+{
+	list-style-type: none;	
+	text-align: center;
+	
+}
+
+ul li
+{
+	display: inline;
+	padding-right: 24px;
+	font-size: 38px;
+	font-family: Gabriola;
+}
+
+nav
+{
+	margin-top: 3%;
+}
+
+nav li
+{
+	font-size: 30px;
+}
+
+img
+{
+	margin-left:200px;
+}
+
+#images
+{
+	margin-top: 80px;
+}
