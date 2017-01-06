@@ -4,10 +4,24 @@ body
 	
 }
 
+@font-face {
+    font-family: 'League Spartan';
+    src: url('fonts\_webfonts\leaguespartan-bold.eot');
+    src: url('fonts\_webfonts\leaguespartan-bold.eot?#iefix') format('embedded-opentype'),
+         url('fonts\_webfonts\leaguespartan-bold.woff2') format('woff2'),
+         url('fonts\_webfonts\leaguespartan-bold.woff') format('woff'),
+         url('fonts\_webfonts\leaguespartan-bold.ttf') format('truetype'),
+         url('fonts\_webfonts\leaguespartan-bold.svg#league_spartanbold') format('svg');
+    font-weight: bold;
+    font-style: normal;
+
+}
+
 h1
 {
 	font-weight: bold;
 	font-size: 60px;
+	font-family: 'League Spartan';
 	text-align:center;
 	margin-top: 7%;
 }
