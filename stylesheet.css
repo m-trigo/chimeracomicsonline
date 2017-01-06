@@ -4,24 +4,10 @@ body
 	
 }
 
-@font-face {
-    font-family: 'League Spartan';
-    src: url('fonts\_webfonts\leaguespartan-bold.eot');
-    src: url('fonts\_webfonts\leaguespartan-bold.eot?#iefix') format('embedded-opentype'),
-         url('fonts\_webfonts\leaguespartan-bold.woff2') format('woff2'),
-         url('fonts\_webfonts\leaguespartan-bold.woff') format('woff'),
-         url('fonts\_webfonts\leaguespartan-bold.ttf') format('truetype'),
-         url('fonts\_webfonts\leaguespartan-bold.svg#league_spartanbold') format('svg');
-    font-weight: bold;
-    font-style: normal;
-
-}
-
 h1
 {
-	font-weight: bold;
-	font-size: 60px;
 	font-family: 'League Spartan';
+	font-size:70px;
 	text-align:center;
 	margin-top: 7%;
 }
@@ -37,7 +23,7 @@ ul li
 {
 	display: inline;
 	padding-right: 24px;
-	font-size: 38px;
+	font-size: 42px;
 	font-family: Gabriola;
 }
 
@@ -49,14 +35,18 @@ nav
 nav li
 {
 	font-size: 30px;
+	font-family: Gabriola;
 }
 
 img
 {
-	margin-left:200px;
+	max-width: 380px;
+	margin-left: 100px;
 }
 
 #images
 {
 	margin-top: 80px;
+	margin-bottom: 100px;
+	margin-left: 200px;
 }
