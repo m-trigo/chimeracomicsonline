@@ -1,2 +1,2 @@
 # chimeracomicsonline
-Official Chimera Comics Website
+[WIP] Official Chimera Comics Website in PT-BR (beta version)
