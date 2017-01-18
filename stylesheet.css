@@ -38,6 +38,12 @@ nav li
 	font-family: Gabriola;
 }
 
+a
+{
+	text-decoration: none;
+	color: black;
+}
+
 img
 {
 	max-width: 380px;
@@ -49,4 +55,9 @@ img
 	margin-top: 80px;
 	margin-bottom: 100px;
 	margin-left: 200px;
+}
+
+.line
+{
+	font-family: 'Helvatica Nue';
 }
