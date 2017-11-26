@@ -8,6 +8,7 @@ window.onload = () => {
 		y = e.touches[0].clientY;
 	}, false);
 	content.addEventListener('touchend', (e) => {
+		return;
 		let dx = e.changedTouches[0].clientX - x;
 		let dy = e.changedTouches[0].clientY - y;
 		if (dy > dx) return;
