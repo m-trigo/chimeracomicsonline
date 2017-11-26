@@ -11,7 +11,7 @@ window.onload = () => {
 		let dx = e.changedTouches[0].clientX - x;
 		let dy = e.changedTouches[0].clientY - y;
 		if (dy > dx) return;
-		if (dx < THRESHOLD) { document.getElementById('back').click();}
-		else if (dx > THRESHOLD) { document.getElementById('fwd').click(); }
+		if (dx < THRESHOLD) { document.getElementById('fwd').click();}
+		else if (dx > THRESHOLD) { document.getElementById('back').click(); }
 	}, false); 
 }
