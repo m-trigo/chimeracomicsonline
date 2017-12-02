@@ -1,0 +1,16 @@
+img
+{
+	max-width:500px;
+	width:100%;
+} 
+
+body
+{
+	background: #000;
+}
+
+a:hover,a:active,a:focus
+{
+	outline:0;
+	border:none;
+}
