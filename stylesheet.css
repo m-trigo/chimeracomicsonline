@@ -1,6 +1,5 @@
 img
 {
-	max-width:500px;
 	width:100%;
 } 
 
@@ -14,3 +13,14 @@ a:hover,a:active,a:focus
 	outline:0;
 	border:none;
 }
+
+@media screen and (min-width : 900px)
+{
+	img
+	{
+		max-width: 500px;
+	}
+}
+
+
+
