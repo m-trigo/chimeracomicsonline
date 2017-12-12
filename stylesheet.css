@@ -1,6 +1,7 @@
 img
 {
 	width:100%;
+	border-radius:2px;
 } 
 
 body
@@ -19,6 +20,13 @@ a:hover,a:active,a:focus
 	img
 	{
 		max-width: 500px;
+	}
+
+	.single
+	{
+		max-width: 100%;
+		width: auto;
+		height: 920px;
 	}
 }
 
