@@ -1,11 +1,10 @@
+const FIRST_PAGE = 1;
+const FINAL_PAGE = 40;
+const THRESHOLD = 240;
+
 var x = undefined;
 var y = undefined;
 var SINGLE_PAGES = [3, 4, 6, 7, 8, 9, 10, 11, 17, 18, 19, 20, 21, 22, 23, 24, 25, 26, 28, 29, 32, 34, 35, 36, 37];
-const FIRST_PAGE = 1;
-const FINAL_PAGE = 40;
-
-const THRESHOLD = 100;
-
 var checksum;
 
 const page_number = () => {
