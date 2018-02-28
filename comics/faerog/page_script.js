@@ -4,7 +4,7 @@ const THRESHOLD = 240;
 
 var x = undefined;
 var y = undefined;
-var SINGLE_PAGES = [3, 4, 6, 7, 8, 9, 10, 11, 17, 18, 19, 20, 21, 22, 23, 24, 25, 26, 28, 29, 32, 34, 35, 36, 37];
+var SINGLE_PAGES = [0, 3, 4, 6, 7, 8, 9, 10, 11, 17, 18, 19, 20, 21, 22, 23, 24, 25, 26, 28, 29, 32, 34, 35, 36, 37];
 var checksum;
 
 const page_number = () => {
@@ -12,8 +12,11 @@ const page_number = () => {
 };
 
 const load_page = (page_number) => {
+	if (!page_number) {
+		page_number = 0;
+	}
 	document.getElementsByTagName('title')[0].innerText = `Faerog Page - ${page_number}`;
-	document.getElementById('page_img').setAttribute('src', `../${page_number}.jpg`);
+	document.getElementById('page_img').setAttribute('src', `./pages/${page_number}.jpg`);
 	if (SINGLE_PAGES.findIndex(e => e == page_number) != -1) {
 		document.getElementById('page_img').classList.add('single');
 	} else {
@@ -34,6 +37,8 @@ const previous_page = () => {
 	let n = parseInt(page_number());
 	if (n > FIRST_PAGE) {
 		load_page(n - 1);
+	} else {
+		window.location.href = "../../index.html"
 	}
 };
 
