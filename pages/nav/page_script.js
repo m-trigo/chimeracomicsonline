@@ -1,6 +1,7 @@
 var x = undefined;
 var y = undefined;
 var SINGLE_PAGES = [3, 4, 6, 7, 8, 9, 10, 11, 17, 18, 19, 20, 21, 22, 23, 24, 25, 26, 28, 29, 32, 34, 35, 36, 37];
+const FIRST_PAGE = 1;
 const FINAL_PAGE = 40;
 
 const THRESHOLD = 100;
@@ -30,6 +31,13 @@ const next_page = () => {
 	}
 };
 
+const previous_page = () => {
+	let n = parseInt(page_number());
+	if (n > FIRST_PAGE) {
+		load_page(n - 1);
+	}
+};
+
 window.onload = () => {
 	var content = document.getElementById('content');
 	content.addEventListener('touchstart', (e) => {
@@ -42,9 +50,11 @@ window.onload = () => {
 		let adx = Math.abs(dx);
 		let ady = Math.abs(dy);
 		if (ady > adx || adx < THRESHOLD) return;
-		if (dx < 0) { document.getElementById('fwd').click(); }
-		else { document.getElementById('back').click(); }
-
+		if (dx < 0) {
+			next_page();
+		} else {
+			previous_page();
+		}
 	}, false);
 
 	document.getElementById('page_img').addEventListener('click', () => {
