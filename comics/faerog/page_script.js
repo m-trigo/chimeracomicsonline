@@ -13,7 +13,7 @@ const page_number = () => {
 
 const load_page = (page_number) => {
 	if (!page_number) {
-		page_number = 0;
+		page_number = 1;
 	}
 	document.getElementsByTagName('title')[0].innerText = `Faerog Page - ${page_number}`;
 	document.getElementById('page_img').setAttribute('src', `./pages/${page_number}.jpg`);
