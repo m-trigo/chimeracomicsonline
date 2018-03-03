@@ -69,6 +69,11 @@ window.onload = () => {
 
 	document.getElementById('page').addEventListener('load', () => {
 		document.getElementById('nav-arrows-container').style.width = `${document.getElementById('page').clientWidth}px`;
+		if (page_number() == FINAL_PAGE) {
+			document.getElementById('forward').classList.add('hid');
+		} else {
+			document.getElementById('forward').classList.remove('hid');
+		}
 		document.getElementById('content').classList.remove('hid');
 	});
 
