@@ -8,6 +8,7 @@ a:hover,a:active,a:focus
 	outline:0;
 	border:none;
 }
+
 .pageclass
 {
 	width:100%;
@@ -17,19 +18,27 @@ a:hover,a:active,a:focus
 .navarrow
 {
 	cursor: pointer;
+	width: 90px;
+	display: none;
 }
 
 @media screen and (min-width : 1200px)
 {
+
+	.navarrow
+	{
+		display:inline-block;
+	}
+
 	.pageclass
 	{
-		max-width: 500px;
+		width: 500px;
 	}
 
 	.single
 	{
 		max-width: 100%;
 		width: auto;
-		height: 920px;
+		height: 860px;
 	}
 }
