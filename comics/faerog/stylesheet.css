@@ -1,52 +1,46 @@
-body
-{
+body {
 	background: #000;
 }
 
-a:hover,a:active,a:focus
-{
+a:hover,a:active,a:focus {
 	outline:0;
 	border:none;
 }
 
-.pageclass
-{
+.pageclass {
 	width:100%;
 	border-radius:2px;
 }
 
-.nav-arrow
-{
+.nav-arrow {
 	cursor: pointer;
 	width: 90px;
 	display: none;
 }
 
-#back
-{
+#back {
 	float:left;
 }
 
-#forward
-{
+#forward {
 	float:right;
 }
 
-@media screen and (min-width : 1200px)
-{
+.hid {
+	visibility: hidden;
+}
 
-	.nav-arrow
-	{
+@media screen and (min-width : 1200px) {
+
+	.nav-arrow {
 		display:inline-block;
 	}
 
-	.pageclass
-	{
+	.pageclass {
 		width: 500px;
 	}
 
-	.single
-	{
+	.single {
 		max-width: 100%;
 		width: auto;
 		height: 860px;

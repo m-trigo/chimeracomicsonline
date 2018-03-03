@@ -12,6 +12,7 @@ const page_number = () => {
 };
 
 const load_page = (page_number) => {
+	document.getElementById('content').classList.add('hid');
 	if (!page_number) {
 		page_number = 1;
 	}
@@ -68,6 +69,7 @@ window.onload = () => {
 
 	document.getElementById('page').addEventListener('load', () => {
 		document.getElementById('nav-arrows-container').style.width = `${document.getElementById('page').clientWidth}px`;
+		document.getElementById('content').classList.remove('hid');
 	});
 
 	document.getElementById('forward').addEventListener('click', () => {
