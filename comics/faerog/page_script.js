@@ -66,6 +66,10 @@ window.onload = () => {
 		next_page();
 	});
 
+	document.getElementById('page').addEventListener('load', () => {
+		document.getElementById('nav-arrows-container').style.width = `${document.getElementById('page').clientWidth}px`;
+	});
+
 	document.getElementById('forward').addEventListener('click', () => {
 		next_page();
 	});

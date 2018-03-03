@@ -15,17 +15,27 @@ a:hover,a:active,a:focus
 	border-radius:2px;
 }
 
-.navarrow
+.nav-arrow
 {
 	cursor: pointer;
 	width: 90px;
 	display: none;
 }
 
+#back
+{
+	float:left;
+}
+
+#forward
+{
+	float:right;
+}
+
 @media screen and (min-width : 1200px)
 {
 
-	.navarrow
+	.nav-arrow
 	{
 		display:inline-block;
 	}
