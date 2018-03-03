@@ -17,11 +17,11 @@ const load_page = (page_number) => {
 	}
 	window.scrollTo(0, 0);
 	document.getElementsByTagName('title')[0].innerText = `Faerog Page - ${page_number}`;
-	document.getElementById('page_img').setAttribute('src', `./pages/${page_number}.jpg`);
+	document.getElementById('page').setAttribute('src', `./pages/${page_number}.jpg`);
 	if (SINGLE_PAGES.findIndex(e => e == page_number) != -1) {
-		document.getElementById('page_img').classList.add('single');
+		document.getElementById('page').classList.add('single');
 	} else {
-		document.getElementById('page_img').classList.remove('single');
+		document.getElementById('page').classList.remove('single');
 	}
 	window.location.href = `${window.location.href.split('#')[0]}#${page_number}`;
 	checksum = page_number;
@@ -62,8 +62,16 @@ window.onload = () => {
 		}
 	}, false);
 
-	document.getElementById('page_img').addEventListener('click', () => {
+	document.getElementById('page').addEventListener('click', () => {
 		next_page();
+	});
+
+	document.getElementById('forward').addEventListener('click', () => {
+		next_page();
+	});
+
+	document.getElementById('back').addEventListener('click', () => {
+		previous_page();
 	});
 
 	load_page(page_number());
