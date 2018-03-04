@@ -64,7 +64,7 @@ window.onload = () => {
 	}, false);
 
 	document.getElementById('page').addEventListener('click', () => {
-		next_page();
+		//next_page();
 	});
 
 	document.getElementById('page').addEventListener('load', () => {
