@@ -94,3 +94,11 @@ window.onhashchange = () => {
 		load_page(n);
 	}
 };
+
+window.addEventListener('keydown', (e) => {
+	if (e.key == 'ArrowRight' || e.key == 'Enter') {
+		next_page();
+	} else if (e.key == 'ArrowLeft') {
+		previous_page();
+	}
+});
