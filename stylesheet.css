@@ -4,11 +4,12 @@
 	border-bottom: 1px solid black;
 	width: 50%;
 	margin-top: 1em;
+	margin-bottom: 100px;
 }
 
 .comic-thumbnail{
 	width: 300px;
-	margin-top:10em;
+	margin-top: 40px;
 }
 
 #contact-email{

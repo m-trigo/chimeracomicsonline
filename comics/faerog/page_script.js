@@ -17,7 +17,7 @@ const load_page = (page_number) => {
 		page_number = 1;
 	}
 	window.scrollTo(0, 0);
-	document.getElementsByTagName('title')[0].innerText = `Faerog Page - ${page_number}`;
+	document.getElementsByTagName('title')[0].innerText = `Faerog - ${page_number}`;
 	document.getElementById('page').setAttribute('src', `./pages/${page_number}.jpg`);
 	if (SINGLE_PAGES.findIndex(e => e == page_number) != -1) {
 		document.getElementById('page').classList.add('single');

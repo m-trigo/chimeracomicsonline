@@ -16,7 +16,7 @@ const load_page = (page_number) => {
 		page_number = 1;
 	}
 	window.scrollTo(0, 0);
-	document.getElementsByTagName('title')[0].innerText = `[WIP] - ${page_number}`;
+	document.getElementsByTagName('title')[0].innerText = `Os Fantasmas nas Ruínas - ${page_number}`;
 	document.getElementById('page').setAttribute('src', `./pages/${page_number}.jpg`);
 	window.location.href = `${window.location.href.split('#')[0]}#${page_number}`;
 	checksum = page_number;
@@ -58,8 +58,9 @@ window.onload = () => {
 	}, false);
 
 	document.getElementById('page').addEventListener('click', () => {
-		if (document.body.clientWidth < 1200)
+		if (document.body.clientWidth < 1200) {
 			next_page();
+		}
 	});
 
 	document.getElementById('page').addEventListener('load', () => {
@@ -70,6 +71,8 @@ window.onload = () => {
 			document.getElementById('forward').classList.remove('hid');
 		}
 		document.getElementById('content').classList.remove('hid');
+
+
 	});
 
 	document.getElementById('forward').addEventListener('click', () => {
