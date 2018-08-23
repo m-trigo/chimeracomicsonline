@@ -22,7 +22,7 @@ const load_page = (page_number) => {
 
 	window.scrollTo(0, 0);
 	document.getElementsByTagName('title')[0].innerText = `Ratos no Caníl - ${page_number}`;
-	document.getElementById('page').setAttribute('src', `./pages/${page_number}.png`);
+	document.getElementById('page').setAttribute('src', `./pages/${page_number}.jpg`);
 	window.location.href = `${window.location.href.split('#')[0]}#${page_number}`;
 	checksum = page_number;
 };
