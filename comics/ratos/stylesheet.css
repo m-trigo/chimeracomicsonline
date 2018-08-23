@@ -1,0 +1,48 @@
+body {
+	background: #000;
+}
+
+a:hover,a:active,a:focus {
+	outline:0;
+	border:none;
+}
+
+.pageclass {
+	width: 100%;
+	height: auto;
+	border-radius:2px;
+}
+
+.nav-arrow {
+	cursor: pointer;
+	width: 90px;
+	display: none;
+}
+
+#back {
+	float:left;
+}
+
+#forward {
+	float:right;
+}
+
+.hid {
+	visibility: hidden;
+}
+
+@media screen and (min-width : 1200px) {
+	.nav-arrow {
+		display:inline-block;
+	}
+
+	.pageclass {
+		width: 875px;
+		max-width:100%;
+		border-radius:2px;
+	}
+
+	.double {
+		width: 100%;
+	}
+}
