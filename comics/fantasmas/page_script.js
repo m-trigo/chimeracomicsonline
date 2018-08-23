@@ -1,9 +1,6 @@
 const FIRST_PAGE = 1;
 const FINAL_PAGE = 16;
-const THRESHOLD = 240;
 
-var x = undefined;
-var y = undefined;
 var checksum;
 
 const page_number = () => {
@@ -39,24 +36,6 @@ const previous_page = () => {
 };
 
 window.onload = () => {
-	var content = document.getElementById('content');
-	content.addEventListener('touchstart', (e) => {
-		x = e.touches[0].clientX;
-		y = e.touches[0].clientY;
-	}, false);
-	content.addEventListener('touchend', (e) => {
-		let dx = e.changedTouches[0].clientX - x;
-		let dy = e.changedTouches[0].clientY - y;
-		let adx = Math.abs(dx);
-		let ady = Math.abs(dy);
-		if (ady > adx || adx < THRESHOLD) return;
-		if (dx < 0) {
-			next_page();
-		} else {
-			previous_page();
-		}
-	}, false);
-
 	document.getElementById('page').addEventListener('click', () => {
 		if (document.body.clientWidth < 1200) {
 			next_page();
