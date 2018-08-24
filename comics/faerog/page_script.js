@@ -1,7 +1,6 @@
 const FIRST_PAGE = 1;
 const FINAL_PAGE = 40;
 
-var SINGLE_PAGES = [0, 3, 4, 6, 7, 8, 9, 10, 11, 17, 18, 19, 20, 21, 22, 23, 24, 25, 26, 28, 29, 32, 34, 35, 36, 37];
 var checksum;
 
 const page_number = () => {
@@ -16,11 +15,6 @@ const load_page = (page_number) => {
 	window.scrollTo(0, 0);
 	document.getElementsByTagName('title')[0].innerText = `Faerog - ${page_number}`;
 	document.getElementById('page').setAttribute('src', `./pages/${page_number}.jpg`);
-	if (SINGLE_PAGES.findIndex(e => e == page_number) != -1) {
-		document.getElementById('page').classList.add('single');
-	} else {
-		document.getElementById('page').classList.remove('single');
-	}
 	window.location.href = `${window.location.href.split('#')[0]}#${page_number}`;
 	checksum = page_number;
 };
@@ -42,29 +36,15 @@ const previous_page = () => {
 };
 
 window.onload = () => {
-	document.getElementById('page').addEventListener('click', () => {
-		if (document.body.clientWidth < 1200)
-			next_page();
-	});
-
 	document.getElementById('page').addEventListener('load', () => {
-		document.getElementById('nav-arrows-container').style.width = `${document.getElementById('page').clientWidth}px`;
-		if (page_number() == FINAL_PAGE) {
-			document.getElementById('forward').classList.add('hid');
+		if (page_number() != FINAL_PAGE) {
+			document.getElementById('page').classList.add('notlast');
 		} else {
-			document.getElementById('forward').classList.remove('hid');
+			document.getElementById('page').classList.remove('notlast');
 		}
 		document.getElementById('content').classList.remove('hid');
 	});
-
-	document.getElementById('forward').addEventListener('click', () => {
-		next_page();
-	});
-
-	document.getElementById('back').addEventListener('click', () => {
-		previous_page();
-	});
-
+	document.getElementById('page').addEventListener('click', () => next_page());
 	load_page(page_number());
 };
 

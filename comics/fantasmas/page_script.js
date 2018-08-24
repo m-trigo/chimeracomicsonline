@@ -36,35 +36,17 @@ const previous_page = () => {
 };
 
 window.onload = () => {
-	document.getElementById('page').addEventListener('click', () => {
-		if (document.body.clientWidth < 1200) {
-			next_page();
-		}
-	});
-
 	document.getElementById('page').addEventListener('load', () => {
-		document.getElementById('nav-arrows-container').style.width = `${document.getElementById('page').clientWidth}px`;
-		if (page_number() == FINAL_PAGE) {
-			document.getElementById('forward').classList.add('hid');
+		if (page_number() != FINAL_PAGE) {
+			document.getElementById('page').classList.add('notlast');
 		} else {
-			document.getElementById('forward').classList.remove('hid');
+			document.getElementById('page').classList.remove('notlast');
 		}
 		document.getElementById('content').classList.remove('hid');
-
-
 	});
-
-	document.getElementById('forward').addEventListener('click', () => {
-		next_page();
-	});
-
-	document.getElementById('back').addEventListener('click', () => {
-		previous_page();
-	});
-
+	document.getElementById('page').addEventListener('click', () => next_page());
 	load_page(page_number());
 };
-
 window.onhashchange = () => {
 	let n = page_number();
 	if (n != checksum) {
