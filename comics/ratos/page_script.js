@@ -14,16 +14,17 @@ const load_page = (page_number) => {
 		page_number = 1;
 	}
 
+	document.getElementById('page').setAttribute('src', `./pages/${page_number}.jpg`);
+	document.getElementsByTagName('title')[0].innerText = `Ratos no Caníl - ${page_number}`;
+
 	if (page_number == DOUBLE_PAGE_INDEX) {
 		document.getElementById('page').classList.add('double');
 	} else {
 		document.getElementById('page').classList.remove('double');
 	}
 
-	window.scrollTo(0, 0);
-	document.getElementsByTagName('title')[0].innerText = `Ratos no Caníl - ${page_number}`;
-	document.getElementById('page').setAttribute('src', `./pages/${page_number}.jpg`);
 	window.location.href = `${window.location.href.split('#')[0]}#${page_number}`;
+	window.scrollTo(0, 0);
 	checksum = page_number;
 };
 
