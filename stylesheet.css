@@ -3,14 +3,14 @@ body {
 }
 
 #title {
-	font-size: 2em;
 	border-bottom: 1px solid black;
 	width: 80%;
-	margin-top: 1em;
+	margin-top: 3em;
 }
 
 .comic-thumbnail {
-	max-width: 80%;
+	width: 300px;
+	max-width: 60%;
 	margin-top: 40px;
 }
 
@@ -24,23 +24,15 @@ a {
 }
 
 @media screen and (min-width: 600px) {
-	#title {
-		font-size: 4rem;
-	}
 
 	#contact-email {
 		font-size: 2em
-	}
-
-	.comic-thumbnail {
-		max-width: 300px;
 	}
 }
 
 @media screen and (min-width :1300px) {
 
 	#title {
-		font-size: 85px;
 		width: 50%;
 		margin-bottom: 100px;
 	}
