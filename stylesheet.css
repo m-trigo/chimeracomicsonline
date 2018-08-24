@@ -10,11 +10,7 @@ body {
 }
 
 .comic-thumbnail {
-	width: 80%;
-	max-width: 300px;
-}
-
-.comic-thumbnail {
+	max-width: 80%;
 	margin-top: 40px;
 }
 
@@ -34,6 +30,10 @@ a {
 
 	#contact-email {
 		font-size: 2em
+	}
+
+	.comic-thumbnail {
+		max-width: 300px;
 	}
 }
 
