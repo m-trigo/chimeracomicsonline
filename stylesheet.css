@@ -1,5 +1,5 @@
 #title {
-	font-family: 'Gabriola';
+	font-family: 'Crimson Text', serif;
 	font-size: 2em;
 	border-bottom: 1px solid black;
 	width: 80%;
@@ -32,7 +32,6 @@ a {
 @media screen and (min-width :1300px) {
 
 	#title {
-		font-family: 'Gabriola';
 		font-size: 100px;
 		border-bottom: 1px solid black;
 		width: 50%;
@@ -46,7 +45,7 @@ a {
 
 	#contact-email{
 		margin-top:10em;
-		font-family: 'Gabriola';
+		font-family: 'Crimson Text', serif;
 		font-size: 25px;
 	}
 }
