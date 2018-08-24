@@ -1,0 +1,26 @@
+body {
+	background: #000;
+}
+
+.notlast {
+	cursor: pointer;
+}
+
+.pageclass {
+	width:100%;
+	border-radius:2px;
+}
+
+.hid {
+	visibility: hidden;
+}
+
+@media screen and (min-width : 1200px) {
+	.pageclass {
+		width:860px;
+	}
+
+	.double {
+		width: 1720px;
+	}
+}
