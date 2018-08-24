@@ -1,5 +1,8 @@
-#title {
+body {
 	font-family: 'Crimson Text', serif;
+}
+
+#title {
 	font-size: 2em;
 	border-bottom: 1px solid black;
 	width: 80%;
@@ -11,12 +14,13 @@
 	max-width: 300px;
 }
 
-.comic-thumbnail{
+.comic-thumbnail {
 	margin-top: 40px;
 }
 
-#contact-email{
-	margin-top:4em;
+#contact-email {
+	margin-top: 4rem;
+	font-size: 1em
 }
 
 a {
@@ -25,7 +29,11 @@ a {
 
 @media screen and (min-width: 600px) {
 	#title {
-		font-size: 4em;
+		font-size: 4rem;
+	}
+
+	#contact-email {
+		font-size: 2em
 	}
 }
 
@@ -33,19 +41,11 @@ a {
 
 	#title {
 		font-size: 100px;
-		border-bottom: 1px solid black;
 		width: 50%;
-		margin-top: 1em;
 		margin-bottom: 100px;
 	}
 
-	.comic-thumbnail {
-		width: 300px;
-	}
-
-	#contact-email{
-		margin-top:10em;
-		font-family: 'Crimson Text', serif;
-		font-size: 25px;
+	#contact-email {
+		margin-top:10rem;
 	}
 }
