@@ -1,5 +1,6 @@
 const FIRST_PAGE = 1;
-const FINAL_PAGE = 13;
+const FINAL_PAGE = 24;
+const DOUBLE_PAGE_INDEX = -1;
 
 var checksum;
 
@@ -13,9 +14,14 @@ const load_page = (page_number) => {
 		page_number = 1;
 	}
 
-	document.getElementById('page').setAttribute('src', `./pages/${page_number}.png`);
+	document.getElementById('page').setAttribute('src', `./pages/${page_number}.jpg`);
 	document.getElementsByTagName('title')[0].innerText = `À Sombra da Fortaleza - ${page_number}`;
-	document.getElementById('page').classList.add('double');
+
+    if (page_number == DOUBLE_PAGE_INDEX) {
+		document.getElementById('page').classList.add('double');
+	} else {
+		document.getElementById('page').classList.remove('double');
+	}
 
 	window.location.href = `${window.location.href.split('#')[0]}#${page_number}`;
 	window.scrollTo(0, 0);
